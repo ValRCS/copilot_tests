@@ -151,4 +151,132 @@
 
 
 # 1. Variables
+# Variables are used to store data
+# Variables can be used to store different types of data
+# Variables can be used to store numbers
+# Variables can be used to store strings
+# Variables can be used to store boolean values
+# Variables can be used to store lists
+# Variables can be used to store dictionaries
+
+# Example of using variables in Python
+name = "Valdis"
+age = 49
+is_male = True
+height = 1.81
+interests = ["coding", "reading", "chess"]
+person = {"name": name, "age": age, "is_male": is_male, "height": height, "interests": interests}
+
+print("Name:", name)
+print("Age:", age)
+print("Is male:", is_male)
+print("Height:", height)
+print("Interests:", interests)
+print("Person:", person)
+
+# Example of using variables to hold sets, tuples, and None in Python
+my_set = {1, 2, 3, 4, 5}
+my_tuple = (6, 7, 8, 9, 10)
+my_none = None
+
+print("Set:", my_set)
+print("Tuple:", my_tuple)
+print("None:", my_none)
+
+# Example of using variables to hold bytes, bytearrays, memoryviews, and complex numbers in Python
+my_bytes = b"Hello"
+my_bytearray = bytearray(5)
+my_memoryview = memoryview(my_bytes)
+my_complex = 1 + 2j
+
+print("Bytes:", my_bytes)
+print("Bytearray:", my_bytearray)
+print("Memoryview:", my_memoryview)
+print("Complex:", my_complex)
+
+# Example of using variables to hold ranges in Python
+my_range = range(5)
+
+print("Range:", my_range)
+# range is not a list, but it can be converted to a list
+print("Range as list:", list(my_range))
+
+
+# 2. Data types
+# Python has several built-in data types
+# int, float, str, bool, list, tuple, dict, set, frozenset, bytes, bytearray, memoryview, complex, range, None
+# We can check the type of a variable using the type() function
+# We can convert between types using the int(), float(), str(), bool(), list(), tuple(), dict(), set(), frozenset(), bytes(), bytearray(), memoryview(), complex(), range(), None() functions
+
+# Example of using the type() function in Python
+print("Type of name:", type(name))
+
+# Example of using the int() function in Python
+print("Int of 1.81:", int(1.81))
+
+# Example of using the float() function in Python
+print("Float of 49:", float(49))
+
+# Example of using the str() function in Python
+print("Str of 49:", str(49))
+
+# Example of using the bool() function in Python
+print("Bool of 49:", bool(49))
+
+# Example of using the list() function in Python
+print("List of 49:", list((49,50)))
+
+# Example of using the tuple() function in Python
+print("Tuple of 49:", tuple([49,2]))
+
+# Example of using the dict() function in Python
+print("Dict of 49:", dict([(49,50),(51,52)]))
+
+# Example of using the set() function in Python
+print("Set of 49:", set([3,2,4,1,2,2,1]))
+
+# Example of using the frozenset() function in Python
+print("Frozenset of 49:", frozenset([3,2,4,1,2,2,1]))
+
+# Example of using the bytes() function in Python
+print("Bytes of 49:", bytes(49))
+print("Bytes of 49:", bytes("Valldis ar kaķiem un suņiem", "utf-8"))
+# list of bytes(ascii) from string
+print("Bytes of 49:", list(bytes("Valldis ar kaķiem un suņiem", "utf-8")))
+print("Bytes of 49:", list(bytes("ā", "utf-8")))
+# ord of ā
+print("Bytes of 49:", ord("ā"))
+# how does Unicode of 257 for ā convert to 196, 129 in bytes?
+print("Bytes of 49:", bytes('ā', 'utf-8'))
+# from https://www.johndcook.com/blog/2019/09/09/how-utf-8-works/
+# So multibyte sequences have one of the following forms.
+
+    # 110xxxxx 10xxxxxx
+    # 1110xxxx 10xxxxxx 10xxxxxx
+    # 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
+
+# print bit view of 196
+print("Bytes of 49:", bin(196))
+# print bit view of 129
+print("Bytes of 49:", bin(129))
+
+# print number from last 5 bits of 196
+print("Bytes of 49:", int(bin(196)[-5:], 2))
+# print number from last 6 bits of 129
+print("Bytes of 49:", int(bin(129)[-6:], 2))
+
+# combine last 5 bits of 196 and last 6 bits of 129
+print("Bytes of 49:", bin(196)[-5:] + bin(129)[-6:])
+# convert that to decimal
+print("Bytes of 49:", int(bin(196)[-5:] + bin(129)[-6:], 2))
+# assert that to be 257
+assert int(bin(196)[-5:] + bin(129)[-6:], 2) == 257
+
+
+
+# # Example of using the bytearray() function in Python
+# print("Bytearray of 49:", bytearray(49))
+
+# # Example of using the memoryview() function in Python
+# print("Memoryview of 49:", memoryview(b"49"))
 
